@@ -9,7 +9,12 @@
     </head>
     <body>
         <div id="app">
-            <h1 v-for="todo in todos">{{todo.id}} {{todo.description}}</h1>
+            <h1 v-for="todo in todos" v-bind:key="todo.id">{{todo.id}} {{todo.description}}</h1>
+            <ol>
+                <li v-for="todo in todos" :key="todo.id" :value="todo.id">
+                    {{ todo.description}}
+                </li>
+            </ol>
         </div>
         <script>
         const App={
@@ -18,9 +23,9 @@
                     todos:[
                         {id:1, description:'eat'},
                         {id:2, description:'sleep'},
-                        {id:3, description:'walk'},
+                        {id:7, description:'walk'},
                         {id:4, description:'work'},
-                        {id:5, description:'play'}
+                        {id:6, description:'play'}
                     ]
                 }
             }
