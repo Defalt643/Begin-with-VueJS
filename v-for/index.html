@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>V-for</title>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1 v-for="todo in todos">{{todo.id}} {{todo.description}}</h1>
+        </div>
+        <script>
+        const App={
+            data(){
+                return{
+                    todos:[
+                        {id:1, description:'eat'},
+                        {id:2, description:'sleep'},
+                        {id:3, description:'walk'},
+                        {id:4, description:'work'},
+                        {id:5, description:'play'}
+                    ]
+                }
+            }
+        }
+        Vue.createApp(App).mount('#app')
+    </script>
+    </body>
+</html>
