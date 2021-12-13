@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id = "app">
-        <input type="number" v-model ="celsius"> <button>
+        <input type="number" v-model ="celsius"> <button @click="convertToFahrenheit()">
             convert to fahrenheit
         </button>
         {{ fahrenheit }}
@@ -20,6 +20,11 @@
                 return{
                     celsius:25,
                     fahrenheit:0
+                }
+            },
+            methods:{
+                convertToFahrenheit(){
+                    this.fahrenheit=(this.celsius*(9/5)+32)
                 }
             }
         }
