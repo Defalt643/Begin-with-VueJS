@@ -9,13 +9,20 @@
 </head>
 <body>
     <div id ="app">
-
+        <input type="text" v-model = "message">
+        {{ message }}<br>
+        <input type="email" v-model = "email">
+        {{ email }}<br>
+        <input type="number" v-model = "number1">
+        {{ number1 }}
     </div>
     <script>
         const App={
             data(){
                 return {
-                    message: 'Hello'
+                    message: 'Hello',
+                    email:'62160244@go.buu.ac.th',
+                    number1:0,
                 }
             },
             methods:{
